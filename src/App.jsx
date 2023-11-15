@@ -17,7 +17,10 @@ const App = () => {
 
   const addNote = () => {
     if (newNote.trim() === '') return;
-    const newNoteObj = { id: uuidv4(), content: newNote };
+    if (newNote.trim() === '') return;
+   
+ 
+    const newNoteObj = { id: uuidv4(), content: newNote, timestamp: new Date().toLocaleString() };
     setNotes([...notes, newNoteObj]);
     setNewNote('');
   };
@@ -43,6 +46,7 @@ const App = () => {
         {notes.map((note) => (
           <div key={note.id} className="note">
             <p>{note.content}</p>
+            <p style={{fontSize:'0.1rem'}}>Created at: {note.timestamp}</p>
             <button onClick={() => deleteNote(note.id)}>Delete</button>
           </div>
         ))}
