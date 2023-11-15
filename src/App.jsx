@@ -29,7 +29,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Stick Notes App</h1>
+      <h1>Welcome! To Sticky Notes </h1>
       <div>
         <input
           type="text"
