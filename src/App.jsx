@@ -46,7 +46,7 @@ const App = () => {
         {notes.map((note) => (
           <div key={note.id} className="note">
             <p>{note.content}</p>
-            <p style={{fontSize:'0.1rem'}}>Created at: {note.timestamp}</p>
+            <p style={{fontSize:'0.9rem'}}>Created at: {note.timestamp}</p>
             <button onClick={() => deleteNote(note.id)}>Delete</button>
           </div>
         ))}
